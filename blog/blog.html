@@ -27,6 +27,32 @@
       .month {
         font-weight: bold;
       }
+
+      #second-list li {
+        /* vado a prendere TUTTI gli <li> dentro l'elemento con id "second-list" */
+        color: lightblue;
+      }
+
+      .blog-post > p {
+        /* vado a prendere SOLAMENTE i <p> annidato al PRIMO LIVELLO dentro l'elemento con classe "blog-post" */
+        opacity: 0.5;
+      }
+
+      blockquote + p {
+        /* solamente un tag <p> immediatamente successivo a un <blockquote> */
+        border: 1px solid black;
+      }
+
+      blockquote ~ p {
+        /* TUTTI i tag <p> successivi a un <blockquote> */
+        border: 1px solid black;
+      }
+
+      ol > li:nth-of-type(10),
+      ol > li:nth-of-type(2) {
+        /* selettore per ogni decimo e secondo elemento di una ol */
+        visibility: hidden;
+      }
     </style>
   </head>
 
@@ -254,6 +280,13 @@
                 eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.
               </p>
             </blockquote>
+            <div>
+              <p>
+                Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras
+                mattis consectetur purus sit amet fermentum. Aenean lacinia
+                bibendum nulla sed consectetur.
+              </p>
+            </div>
             <p>
               Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras
               mattis consectetur purus sit amet fermentum. Aenean lacinia
@@ -335,7 +368,7 @@
 
           <div class="p-3">
             <h4 class="font-italic">Elsewhere</h4>
-            <ol class="list-unstyled">
+            <ol class="list-unstyled" id="second-list">
               <li>GitHub</li>
               <li>Twitter</li>
               <li>Facebook</li>
