@@ -1,0 +1,45 @@
+/* 3) */
+
+footer strong {
+  /* questo selettore è PIÙ FORTE di quello alla riga 13, perchè
+    è di discendenza... vincerà! */
+  color: limegreen;
+}
+
+strong {
+  /* viene ignorato NONOSTANTE arrivi dopo, perchè il selettore in alto
+    ha SPECIFICITÀ maggiore */
+  color: red;
+}
+
+footer {
+  font-size: 50px;
+}
+
+html {
+  /* font-size: 100px; */
+}
+
+footer strong {
+  /* font-size: 50%; 25px */
+  font-size: 0.5em; /* 25px, perchè footer ha una font-size di 50px */
+  font-size: 0.5rem; /* 50px, perchè il documento HTML ha una font-size di 100px */
+}
+
+#pietro {
+  font-size: 2em;
+}
+
+/* il . significa che "test" è una classe */
+.test {
+  font-size: 1.5em;
+}
+
+/* nei primi due paragrafi NON vince questa regola con font-size: 1.2em,
+perchè li ho selezionati con selettore di classe che ha specificità maggiore */
+p {
+  font-weight: bold; /* grassetto */
+  font-size: 1.2rem;
+}
+
+/* selettore id > selettore classe > selettore tag */
