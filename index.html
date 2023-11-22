@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prova inserimento CSS</title>
+    <style>
+      /* 2) */
+      /* qui inseriamo delle vere e proprie REGOLE CSS */
+      /* una regola è fatta da: */
+      /* selettore { proprietà: valore } */
+      h3 {
+        /* questo selettore "h3" andrà a selezionarmi TUTTI gli <h3> del documento */
+        border: 2px solid black;
+        /* border-width: 2px;
+        border-style: solid;
+        border-color: black; */
+        background-color: dimgray;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <!-- 1) -->
+      <h1 style="color: red; text-align: center">Pagina di test CSS!</h1>
+      <!-- 2) -->
+      <h3>Proviamo i 3 diversi metodi di integrazione di regole CSS</h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et sapiente
+        unde modi. Mollitia, dolore necessitatibus. Tempora, molestiae velit
+        beatae neque accusamus et culpa quia ipsa fugit illo ducimus in
+        reprehenderit.
+      </p>
+    </main>
+  </body>
+</html>
+
+<!-- 3 MODI PER INCORPORARE CSS -->
+<!-- 1) -NON USARE- utilizzare l'attributo "style" direttamente in un tag (CSS INLINE)  -->
+<!-- 2) inserire nel tag <head> un tag <style> (CSS INCORPORATO) -->
+<!-- 3) utilizzare un foglio CSS esterno, metodologia più consigliata (CSS ESTERNO) -->
